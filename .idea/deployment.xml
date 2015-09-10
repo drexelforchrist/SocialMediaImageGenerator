@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="local apache" />
+  <component name="PublishConfigData" serverName="FH Production">
+    <serverData>
+      <paths name="FH Production">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/drexelforchrist.org/dev/imageText" local="$PROJECT_DIR$" web="/dev/imageText" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
 </project>
