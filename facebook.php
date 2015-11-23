@@ -50,7 +50,14 @@ $font_path = 'Cabin-Regular-TTF.ttf';
 $text = $eventInfo['name'];
 
 // Print Text On Image
-imagettftext($jpg_image, 100, 0, 30, 180, $white, $font_path, $text);
+
+$size = 100;
+do {
+	$corners = imagettfbbox ($size, 0, $font_path, $text);
+} while ($corners[4] > 1080 && $size--);
+
+imagettftext($jpg_image, $size, 0, 30, 180, $white, $font_path, $text);
+
 
 // subtitle, too.
  if (isset($eventInfo['subtitle']) && $eventInfo['subtitle']!="") {
