@@ -33,6 +33,9 @@ switch($eventInfo['calendarID']) {
 	case 3: // prayer
 		$jpg_image = imagecreatefromjpeg('prayerDefaultOpengraph.jpg');
 		break;
+	case 5: // discipleship
+		$jpg_image = imagecreatefromjpeg('discipleshipDefaultOpengraph.jpg');
+		break;
 	default:
 		$jpg_image = imagecreatefromjpeg('communityDefaultOpengraph.jpg');
 }
