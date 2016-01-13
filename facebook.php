@@ -3,6 +3,23 @@
 $dml = new SimpleXMLElement(file_get_contents('http://dev.drexelforchrist.org/'.$_SERVER['PATH_INFO'].'.dml'));
 
 
+try {
+	if ($dml->document->title = "Free Hot Chocolate &amp; Cookies") {
+		header('Content-type: image/jpeg');
+		$jpg_image = imagecreatefromjpeg('Cookies-opengraph.jpg');
+
+		// Send Image to Browser
+		imagejpeg($jpg_image);
+
+		// Clear Memory
+		imagedestroy($jpg_image);
+		die();
+	}
+} catch (Exception $e) {
+	// cool.
+}
+
+
 $title = $dml->document->title;
 
 try {
