@@ -4,7 +4,7 @@ $dml = new SimpleXMLElement(file_get_contents('http://dev.drexelforchrist.org/'.
 
 
 try {
-	if ($dml->document->title = "Free Hot Chocolate &amp; Cookies") {
+	if ($dml->document->title == "Free Hot Chocolate & Cookies") {
 		header('Content-type: image/jpeg');
 		$jpg_image = imagecreatefromjpeg('Cookies-opengraph.jpg');
 
