@@ -1,6 +1,6 @@
 <?php
 
-$dml = new SimpleXMLElement(file_get_contents('http://dev.drexelforchrist.org/'.$_SERVER['PATH_INFO'].'.dml'));
+$dml = new SimpleXMLElement(file_get_contents('http://dev.drexelforchrist.org'.$_SERVER['PATH_INFO'].'.dml'));
 
 
 try {
