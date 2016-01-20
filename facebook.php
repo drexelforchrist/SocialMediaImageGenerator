@@ -81,7 +81,7 @@ imagettftext($jpg_image, $size, 0, 30, 180, $white, $font_path, $title);
 }
 
 // Send Image to Browser
-imagejpeg($jpg_image);
+imagejpeg($jpg_image, null, 100);
 
 // Clear Memory
 imagedestroy($jpg_image);
