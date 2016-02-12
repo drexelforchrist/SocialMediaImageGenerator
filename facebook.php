@@ -15,6 +15,17 @@ try {
 		imagedestroy($jpg_image);
 		die();
 	}
+	if ($dml->document->title == "Valentine's Formal") {
+		header('Content-type: image/jpeg');
+		$jpg_image = imagecreatefromjpeg('Valentine-social.jpg');
+
+		// Send Image to Browser
+		imagejpeg($jpg_image);
+
+		// Clear Memory
+		imagedestroy($jpg_image);
+		die();
+	}
 } catch (Exception $e) {
 	// cool.
 }

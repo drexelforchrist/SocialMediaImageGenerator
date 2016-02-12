@@ -5,7 +5,7 @@
       <paths name="FH Production">
         <serverdata>
           <mappings>
-            <mapping deploy="/drexelforchrist.org/dev/imageText" local="$PROJECT_DIR$" web="/dev/imageText" />
+            <mapping deploy="/13.drexelforchrist.org/dev/imageText" local="$PROJECT_DIR$" web="/dev/imageText" />
           </mappings>
         </serverdata>
       </paths>
