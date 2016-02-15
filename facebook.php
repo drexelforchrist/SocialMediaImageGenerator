@@ -1,6 +1,23 @@
 <?php
 
-$dml = new SimpleXMLElement(file_get_contents('http://dev.drexelforchrist.org'.$_SERVER['PATH_INFO'].'.dml'));
+/* gets the data from a URL */
+function get_data($url) {
+	$ch = curl_init();
+	$timeout = 5;
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+	$data = curl_exec($ch);
+	curl_close($ch);
+	return $data;
+}
+
+
+
+$dml = new SimpleXMLElement(get_data('https://drexelforchrist.org' . $_SERVER['PATH_INFO'] . '.dml'));
+
 
 
 try {
