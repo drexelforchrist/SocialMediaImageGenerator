@@ -23,35 +23,17 @@ $dml = new SimpleXMLElement(get_data('https://drexelforchrist.org' . $_SERVER['P
 try {
 	if ($dml->document->title == "Free Hot Chocolate & Cookies") {
 		header('Content-type: image/jpeg');
-		$jpg_image = imagecreatefromjpeg('Cookies-opengraph.jpg');
-
-		// Send Image to Browser
-		imagejpeg($jpg_image);
-
-		// Clear Memory
-		imagedestroy($jpg_image);
+		echo file_get_contents('Cookies-opengraph.jpg');
 		die();
 	}
 	if ($dml->document->title == "Alpha") {
 		header('Content-type: image/jpeg');
-		$jpg_image = imagecreatefromjpeg('alpha-opengraph.jpg');
-
-		// Send Image to Browser
-		imagejpeg($jpg_image);
-
-		// Clear Memory
-		imagedestroy($jpg_image);
+		echo file_get_contents('alpha-opengraph.jpg');
 		die();
 	}
 	if ($dml->document->title == "Valentine's Formal") {
 		header('Content-type: image/jpeg');
-		$jpg_image = imagecreatefromjpeg('Valentine-social.jpg');
-
-		// Send Image to Browser
-		imagejpeg($jpg_image);
-
-		// Clear Memory
-		imagedestroy($jpg_image);
+		echo file_get_contents('Valentine-social.jpg');
 		die();
 	}
 } catch (Exception $e) {
