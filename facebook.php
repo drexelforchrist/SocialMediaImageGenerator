@@ -77,7 +77,7 @@ switch($template) {
 $white = imagecolorallocate($jpg_image, 255, 255, 255);
 
 // Set Path to Font File
-$font_path = 'Cabin-Regular-TTF.ttf';
+$font_path = 'fonts/Cabin-Regular-TTF.ttf';
 
 // Print Text On Image
 
