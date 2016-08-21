@@ -55,22 +55,30 @@ try {
 	$template = null;
 }
 
+if ($title == '') {
+	$title = "Welcome";
+	$subtitle = "";
+}
+
 //Set the Content Type
 header('Content-type: image/jpeg');
 
 // Create Image From Existing File
 switch($template) {
 	case 'church': // church
-		$jpg_image = imagecreatefromjpeg('churchDefaultOpengraph.jpg');
+		$jpg_image = imagecreatefromjpeg('img-opengraph/churchDefaultOpengraph.jpg');
 		break;
 	case 'prayer': // prayer
-		$jpg_image = imagecreatefromjpeg('prayerDefaultOpengraph.jpg');
+		$jpg_image = imagecreatefromjpeg('img-opengraph/prayerDefaultOpengraph.jpg');
 		break;
 	case 'discipleship': // discipleship
-		$jpg_image = imagecreatefromjpeg('discipleshipDefaultOpengraph.jpg');
+		$jpg_image = imagecreatefromjpeg('img-opengraph/discipleshipDefaultOpengraph.jpg');
+		break;
+	case 'outreach': // discipleship
+		$jpg_image = imagecreatefromjpeg('img-opengraph/outreachDefaultOpengraph.jpg');
 		break;
 	default:
-		$jpg_image = imagecreatefromjpeg('communityDefaultOpengraph.jpg');
+		$jpg_image = imagecreatefromjpeg('img-opengraph/communityDefaultOpengraph.jpg');
 }
 
 // Allocate A Color For The Text
