@@ -21,6 +21,16 @@ $dml = new SimpleXMLElement(get_data('https://drexelforchrist.org' . $_SERVER['P
 
 
 try {
+	if ($dml->document->title == "SupaPhat" && $dml->document->id == 740) {
+		header('Content-type: image/jpeg');
+		echo file_get_contents('sex-opengraph.jpg');
+		die();
+	}
+	if ($dml->document->title == "Campus-Wide Worship") {
+		header('Content-type: image/png');
+		echo file_get_contents('cww-opengraph.png');
+		die();
+	}
 	if ($dml->document->title == "Free Hot Chocolate & Cookies") {
 		header('Content-type: image/jpeg');
 		echo file_get_contents('Cookies-opengraph.jpg');
@@ -74,10 +84,10 @@ switch($template) {
 	case 'discipleship': // discipleship
 		$jpg_image = imagecreatefromjpeg('img-opengraph/discipleshipDefaultOpengraph.jpg');
 		break;
-	case 'outreach': // discipleship
+	case 'outreach': // outreach
 		$jpg_image = imagecreatefromjpeg('img-opengraph/outreachDefaultOpengraph.jpg');
 		break;
-	default:
+	default: // community.
 		$jpg_image = imagecreatefromjpeg('img-opengraph/communityDefaultOpengraph.jpg');
 }
 

@@ -65,7 +65,7 @@ switch($template) {
 		$image = imagecreatefrompng('img-clink/discipleship.png');
 		break;
 	default:
-		$image = imagecreatefromjpeg('communityDefaultOpengraph.jpg');
+		$image = imagecreatefromjpeg('img-opengraph/communityDefaultOpengraph.jpg');
 }
 
 // Allocate A Color For The Text
@@ -132,17 +132,6 @@ if ($subtitle != null && $subtitle != '') {
 }
 
 
-// subtitle, too.
-// if ($subtitle != null) {
-//
-//	 $size = min(45, $size); // subtitle shouldn't be bigger than the title
-//	 do {
-//		 $corners = imagettfbbox ($size, 0, $font_path, $subtitle);
-//	 } while ($corners[4] > 1080 && $size--);
-//
-//	// Print Text On Image
-//	imagettftext($jpg_image, $size, 0, 30, 270, $white, $font_path, $subtitle);
-//}
 
 // Send Image to Browser
 header('Content-type: image/jpeg');
